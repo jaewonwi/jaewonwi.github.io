@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="백엔드 개발자 위재원 소개">
+  <title>About | 위재원</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Jaewon Wi</a>
+    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page shell">
+    <section class="page-title">
+      <p class="section-kicker">About Me</p>
+      <h1>기능 구현을 넘어, 유지보수 가능한 흐름을 고민합니다.</h1>
+      <p>요구사항을 API 명세, 데이터 모델, 예외 처리, 배포 흐름으로 구체화하는 백엔드 개발자를 지향합니다.</p>
+    </section>
+
+    <section class="content-row">
+      <h2>Working Style</h2>
+      <div class="body-copy">
+        <p>
+          서비스 요구사항을 빠르게 코드로 옮기는 것만큼, 이후의 변경과 운영을 견딜 수 있는 구조를 만드는 일을 중요하게 생각합니다.
+          도메인의 책임을 나누고, 예외 상황을 먼저 정리하며, 팀원이 이해할 수 있는 코드와 기록을 남기려 합니다.
+        </p>
+        <p>
+          문제가 생겼을 때는 로그, 쿼리, 재현 조건을 기준으로 원인을 좁혀가며 해결합니다.
+          프로젝트 상세 모달에는 이런 문제해결 과정을 프로젝트 맥락 안에서 함께 정리합니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="value-list" aria-label="개발 가치">
+      <article>
+        <span>01</span>
+        <h2>구조화</h2>
+        <p>요구사항을 도메인, API, 데이터 흐름으로 나누어 설계합니다.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>안정성</h2>
+        <p>검증, 예외 처리, 트랜잭션을 통해 예측 가능한 백엔드를 만듭니다.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>개선</h2>
+        <p>쿼리와 응답 시간을 관찰하고 병목을 찾아 점진적으로 개선합니다.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Jaewon Wi</span>
+    <a href="mailto:your-email@example.com">your-email@example.com</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
