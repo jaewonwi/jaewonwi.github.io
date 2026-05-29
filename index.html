@@ -1,83 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="백엔드 개발자 위재원 포트폴리오">
-  <title>위재원 | Backend Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="index.html">Jaewon Wi</a>
-    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="site-nav" aria-label="주요 메뉴">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="education.html">Education</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="문제를 구조적으로 파악하고 해결하는 백엔드 개발자 위재원입니다."
+    />
+    <title>Jaewon Wi | Backend Developer</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/sections.css" />
+    <link rel="stylesheet" href="./css/themes.css" />
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Home">Jaewon Wi</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a data-work-nav href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="icon-button theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span aria-hidden="true">☾</span>
+      </button>
+    </header>
 
-  <main>
-    <section class="hero shell">
-      <div class="hero-copy">
-        <p class="intro-label">안녕하세요, 저는</p>
-        <h1>위재원</h1>
-        <p class="role">Backend Developer</p>
-        <p class="hero-description">
-          안정적인 API와 데이터 흐름을 설계하고, 문제를 끝까지 추적해 해결합니다.
-        </p>
-        <div class="hero-actions" aria-label="주요 링크">
-          <a class="button primary" href="#" aria-label="이력서 파일은 추후 연결 예정">Download CV</a>
-          <a class="button secondary" href="contact.html">Contact</a>
-        </div>
-      </div>
+    <main>
+      <section id="home" class="hero section"></section>
+      <section id="about" class="section"></section>
+      <section id="skills" class="section"></section>
+      <section id="work" class="section" hidden></section>
+      <section id="projects" class="section"></section>
+      <section id="education" class="section"></section>
+      <section id="credentials" class="section"></section>
+      <section id="contact" class="section"></section>
+    </main>
 
-      <aside class="profile-visual" aria-label="프로필 요약">
-        <div class="profile-circle">
-          <span>JW</span>
-        </div>
-        <div class="profile-summary">
-          <strong>API · Database · Deployment</strong>
-          <span>Spring Boot 기반 백엔드 개발</span>
-        </div>
-      </aside>
-    </section>
+    <div id="modal-root"></div>
 
-    <section class="home-preview shell" aria-label="홈 요약">
-      <a class="preview-panel" href="about.html">
-        <span>01</span>
-        <h2>About Me</h2>
-        <p>요구사항을 API, 데이터 모델, 운영 관점으로 구조화하는 개발자입니다.</p>
-      </a>
-      <a class="preview-panel" href="education.html">
-        <span>02</span>
-        <h2>Education</h2>
-        <p>학습 과정과 교육 이력을 간결하게 정리해 성장 흐름을 보여줍니다.</p>
-      </a>
-      <a class="preview-panel" href="skills.html">
-        <span>03</span>
-        <h2>Skills</h2>
-        <p>기술 이름보다 어떤 상황에서 어떻게 사용했는지 중심으로 정리합니다.</p>
-      </a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>© 2026 Jaewon Wi</span>
-    <a href="mailto:your-email@example.com">your-email@example.com</a>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>
