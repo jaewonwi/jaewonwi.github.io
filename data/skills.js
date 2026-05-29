@@ -5,11 +5,11 @@ export const skills = [
   },
   {
     group: "Backend",
-    items: ["Spring", "Spring Boot", "Spring Data JPA", "MyBatis", "Spring WebFlux", "R2DBC"]
+    items: ["Spring", "Spring Boot", "JPA", "MyBatis", "Spring WebFlux"]
   },
   {
     group: "Database",
-    items: ["MySQL", "MongoDB", "Redis"]
+    items: ["MySQL", "Oracle", "MongoDB", "Redis"]
   },
   {
     group: "Infra",
