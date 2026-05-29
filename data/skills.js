@@ -1,7 +1,7 @@
 export const skills = [
   {
     group: "Language",
-    items: ["Java", "SQL", "JavaScript", "C", "Python", "Fortran", "MATLAB"]
+    items: ["Java", "SQL", "JavaScript", "C", "Python"]
   },
   {
     group: "Backend",
@@ -9,7 +9,7 @@ export const skills = [
   },
   {
     group: "Database",
-    items: ["MySQL", "MongoDB", "Redis", "RDBMS", "NoSQL", "ERD Design"]
+    items: ["MySQL", "MongoDB", "Redis"]
   },
   {
     group: "Infra",
