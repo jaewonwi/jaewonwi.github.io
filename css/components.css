@@ -17,7 +17,16 @@
 
 .button {
   background: var(--surface-strong);
+  gap: 0.55rem;
   padding: 0.8rem 1.25rem;
+}
+
+.button img {
+  display: block;
+  flex: 0 0 auto;
+  height: 1.05em;
+  object-fit: contain;
+  width: 1.05em;
 }
 
 .button:hover,
@@ -204,10 +213,12 @@
   color: var(--muted);
 }
 
+.modal__summary {
+  font-weight: 800;
+}
+
 .modal__hero {
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.76)),
-    linear-gradient(135deg, #1c1f2b, #111318);
+  background: #111318;
   color: #ffffff;
   display: grid;
   min-height: 360px;
@@ -217,7 +228,7 @@
 }
 
 .modal__hero::after {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.78), transparent 58%);
+  background: rgba(0, 0, 0, 0.5);
   content: "";
   inset: 0;
   position: absolute;
@@ -235,7 +246,6 @@
   align-self: end;
   display: grid;
   gap: 1rem;
-  max-width: 680px;
   position: relative;
   z-index: 1;
 }
@@ -243,7 +253,7 @@
 .modal__hero .eyebrow,
 .modal__hero .modal__summary,
 .modal__hero .modal__meta {
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .modal__hero .tag {
@@ -270,9 +280,27 @@
 
 .modal__meta {
   color: var(--muted);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.modal__meta div {
+  align-items: baseline;
+  display: grid;
+  gap: 0.35rem;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+}
+
+.modal__meta span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.modal__meta strong {
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .modal__section {

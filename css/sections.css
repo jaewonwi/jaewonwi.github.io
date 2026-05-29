@@ -50,7 +50,7 @@
 
 .hero__headline {
   color: var(--muted);
-  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   max-width: 720px;
   white-space: pre-line;
 }
@@ -175,22 +175,57 @@
   white-space: nowrap;
 }
 
-.contact-card {
+.contact-simple {
+  align-items: center;
   display: grid;
-  gap: 0.35rem;
-  min-height: 140px;
-  padding: 1.25rem;
-  place-items: center;
-  text-align: center;
+  gap: 1.5rem;
+  justify-items: center;
 }
 
-.contact-card span {
-  color: var(--accent);
+.contact-email,
+.contact-link {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.65rem;
+}
+
+.contact-email {
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
   font-weight: 900;
 }
 
-.contact-card strong {
+.contact-email img,
+.contact-link img {
+  display: block;
+  flex: 0 0 auto;
+  height: 1.15em;
+  object-fit: contain;
+  width: 1.15em;
+}
+
+.contact-email strong {
   overflow-wrap: anywhere;
+}
+
+.contact-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+  justify-content: center;
+}
+
+.contact-link {
+  color: var(--muted);
+  font-weight: 800;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 640px) {

@@ -58,13 +58,45 @@ export const projects = [
       "AWS S3를 활용한 이미지 스토리지 적용",
       "Docker와 Jenkins 기반 CI/CD 파이프라인 구축"
     ],
+    techDecisions: [
+      {
+        name: "Spring WebFlux",
+        reason: "놀이형 언어치료 서비스에서 사용자 요청과 파일 처리 흐름을 효율적으로 다루고, 비동기 기반 API 구조를 경험하기 위해 사용했습니다."
+      },
+      {
+        name: "R2DBC",
+        reason: "WebFlux의 논블로킹 흐름을 데이터베이스 접근 계층까지 이어가고, 반응형 방식으로 MySQL 데이터를 처리하기 위해 사용했습니다."
+      },
+      {
+        name: "Spring Security",
+        reason: "아이와 관리자의 권한을 구분하고, 역할별 접근 제어가 필요한 기능을 안전하게 제공하기 위해 사용했습니다."
+      },
+      {
+        name: "JWT",
+        reason: "프론트엔드와 백엔드가 분리된 환경에서 세션 의존성을 줄이고, 인증 상태를 토큰 기반으로 관리하기 위해 사용했습니다."
+      },
+      {
+        name: "AWS S3",
+        reason: "학습 콘텐츠와 이미지 파일을 애플리케이션 서버와 분리해 저장하고, 배포 환경에서도 안정적으로 정적 리소스를 관리하기 위해 사용했습니다."
+      },
+      {
+        name: "Docker / Jenkins / Nginx",
+        reason: "컨테이너 기반 실행 환경, 자동 배포 파이프라인, 리버스 프록시 구성을 통해 배포 과정을 표준화하고 운영 편의성을 높이기 위해 사용했습니다."
+      }
+    ],
     details: {
       problem: "언어장애 아동이 반복적인 치료 훈련을 부담 없이 지속할 수 있도록 실제 치료법에 게이미피케이션을 결합한 서비스가 필요했습니다.",
       solution: "아이와 관리자를 구분한 기능을 제공하고, 언어치료사의 요구사항을 반영해 센터에서 교보재로 활용할 수 있는 놀이형 언어 훈련 서비스를 구현했습니다.",
-      contribution: "인프라 담당으로 배포 환경과 CI/CD 파이프라인을 구축했고, 백엔드 일부 기능으로 사용자 데이터 관련 API와 발화 데이터 저장 흐름 구현에 참여했습니다."
+      contribution: "인프라 담당으로 배포 환경과 CI/CD 파이프라인을 구축했고, 백엔드 일부 기능으로 사용자 데이터 관련 API와 발화 데이터 저장 흐름 구현에 참여했습니다.",
+      troubleshooting: "배포 환경에서는 프론트엔드, 백엔드, 정적 리소스 요청 경로를 안정적으로 분리하는 것이 중요했습니다. Nginx를 리버스 프록시로 구성해 요청 흐름을 정리하고, Docker와 Jenkins를 활용해 빌드와 배포 과정을 자동화했습니다. 또한 이미지 리소스는 AWS S3로 분리해 서버 저장소 의존도를 낮추고 운영 환경에서 파일 관리 부담을 줄였습니다."
     },
+    outcomes: [
+      "Docker, Jenkins, Nginx를 활용해 실제 서비스 배포 파이프라인을 구축하며 인프라 운영 흐름을 경험했습니다.",
+      "Spring WebFlux와 R2DBC 기반 API를 다루며 반응형 백엔드 구조와 기존 MVC 방식의 차이를 학습했습니다.",
+      "AWS S3를 활용한 이미지 저장 구조를 적용하며 서버와 외부 스토리지의 책임 분리 방식을 익혔습니다."
+    ],
     links: {
-      github: "",
+      github: "https://github.com/ggomal/ggomalggomal",
       demo: ""
     }
   },
@@ -165,7 +197,7 @@ export const projects = [
       "표준국어대사전, 네이버 검색 OpenAPI 응답 구조를 분석하고 통합 단어 검색 기능으로 연결했습니다."
     ],
     links: {
-      github: "",
+      github: "https://github.com/seodangdogProject/seodangdog",
       demo: ""
     }
   },
@@ -276,7 +308,7 @@ export const projects = [
       "WBS와 Jira를 활용해 팀 일정과 작업 흐름을 관리했습니다."
     ],
     links: {
-      github: "",
+      github: "https://github.com/movezoo/movezoo",
       demo: ""
     }
   },

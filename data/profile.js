@@ -9,15 +9,17 @@ export const profile = {
   ],
   headline: "문제를 구조적으로 분석하고 데이터 흐름의 효율을 고민하는\n백엔드 개발자 위재원입니다.",
   about: [
-    "Java와 Spring Boot를 중심으로 API 설계, 데이터 모델링, 인증/인가, 배포 자동화에 관심이 있습니다.",
-    "문제를 작게 쪼개고, 근거 있는 기술 선택과 꾸준한 개선으로 서비스 품질을 높이는 개발자를 지향합니다.",
-    "채용담당자가 빠르게 확인할 수 있도록 프로젝트마다 역할, 성과, 기술적 의사결정을 명확하게 정리했습니다."
+    "문제의 원인과 시스템 구조를 끝까지 분석하며 개선합니다.",
+    "데이터 흐름과 서비스 구조를 고민하며 효율적이고 안정적인 백엔드 시스템을 설계합니다.",
+    "기술로써 사용자 경험을 개선합니다.",
+    "역할의 경계를 두지 않고 서비스 완성과 팀의 성장을 함께 중요하게 생각합니다.",
   ],
   links: {
     email: "mailto:jww5555@naver.com",
     github: "https://github.com/jaewonwi",
-    linkedin: "https://www.linkedin.com/",
-    resume: "./assets/resume/resume.pdf"
+    linkedin: "https://www.linkedin.com/in/jaewonwi",
+    instagram: "https://www.instagram.com/weeeee___w/",
+    resume: ""
   },
   contact: {
     email: "jww5555@naver.com",

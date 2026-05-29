@@ -4,7 +4,7 @@ export function initTheme() {
   const button = document.querySelector(".theme-toggle");
   const savedTheme = localStorage.getItem(STORAGE_KEY);
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+  const initialTheme = savedTheme ||  "light";
 
   setTheme(initialTheme);
 

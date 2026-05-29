@@ -5,16 +5,16 @@
   --text: #f5f7fb;
   --muted: #9a9da6;
   --line: #252932;
-  --accent: #8c7aff;
-  --accent-strong: #a093ff;
-  --accent-soft: #201b3f;
+  --accent: #6db33f;
+  --accent-strong: #8fd16a;
+  --accent-soft: #193312;
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.34);
   --terminal-bg: #171923;
   --terminal-bar: #242737;
   --terminal-border: #383c50;
   --terminal-text: #9fd9ff;
-  --terminal-accent: #8fd5cf;
-  --terminal-command: #8fd5cf;
+  --terminal-accent: #8fd16a;
+  --terminal-command: #8fd16a;
   color-scheme: dark;
 }
 

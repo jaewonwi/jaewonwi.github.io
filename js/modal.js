@@ -107,9 +107,22 @@ export function initProjectModal(projects) {
               <h2 id="project-modal-title">${escapeHtml(project.title)}</h2>
               <p class="modal__summary">${escapeHtml(project.summary)}</p>
               <div class="modal__meta">
-                <span>${escapeHtml(project.period)}</span>
-                ${project.team ? `<span>${escapeHtml(project.team)}</span>` : ""}
-                <span>${escapeHtml(project.role)}</span>
+                <div>
+                  <span>Period</span>
+                  <strong>${escapeHtml(project.period)}</strong>
+                </div>
+                ${
+                  project.team
+                    ? `<div>
+                        <span>Team</span>
+                        <strong>${escapeHtml(project.team)}</strong>
+                      </div>`
+                    : ""
+                }
+                <div>
+                  <span>Role</span>
+                  <strong>${escapeHtml(project.role)}</strong>
+                </div>
               </div>
               <div class="tag-row">
                 ${project.techStack.map((tech) => `<span class="tag">${escapeHtml(tech)}</span>`).join("")}
@@ -117,7 +130,10 @@ export function initProjectModal(projects) {
               <div class="action-row">
                 ${
                   project.links.github
-                    ? `<a class="button button--primary" href="${project.links.github}" target="_blank" rel="noreferrer">GitHub</a>`
+                    ? `<a class="button button--primary" href="${project.links.github}" target="_blank" rel="noreferrer">
+                        <img src="./assets/icons/github.svg" alt="" aria-hidden="true" />
+                        <span>GitHub</span>
+                      </a>`
                     : ""
                 }
                 ${
@@ -140,15 +156,6 @@ export function initProjectModal(projects) {
             }
             ${renderScreenshotGallery(project.screenshots)}
             ${
-              hasItems(project.highlights)
-                ? `<div class="modal__section">
-                    <h3>주요 기능</h3>
-                    <ul>${project.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
-                  </div>`
-                : ""
-            }
-            ${renderTechDecisions(project.techDecisions)}
-            ${
               project.details?.contribution
                 ? `<div class="modal__section">
                     <h3>담당 역할</h3>
@@ -156,6 +163,15 @@ export function initProjectModal(projects) {
                   </div>`
                 : ""
             }
+            ${
+              hasItems(project.highlights)
+                ? `<div class="modal__section">
+                    <h3>구현 내용</h3>
+                    <ul>${project.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+                  </div>`
+                : ""
+            }
+            ${renderTechDecisions(project.techDecisions)}
             ${renderImageSection("아키텍처", project.architecture)}
             ${renderImageSection("ERD", project.erd)}
             ${

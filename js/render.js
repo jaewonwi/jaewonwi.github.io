@@ -13,6 +13,8 @@ const firstProjectImage = (project) =>
   project.thumbnail || project.heroImage || project.screenshots?.[0]?.src || "";
 
 export function renderHero(profile) {
+  const resumeLink = profile.links.resume;
+
   document.querySelector("#home").innerHTML = `
     <div class="hero__content">
       <div class="hero__avatar" aria-hidden="true">
@@ -24,9 +26,16 @@ export function renderHero(profile) {
         <h2>${escapeHtml(profile.name)}</h2>
         <p class="hero__headline">${escapeHtml(profile.headline)}</p>
         <div class="action-row">
-          <a class="button button--primary" href="${profile.links.resume}" target="_blank" rel="noreferrer">Resume</a>
+          ${
+            resumeLink
+              ? `<a class="button button--primary" href="${escapeHtml(resumeLink)}" target="_blank" rel="noreferrer">Resume</a>`
+              : ""
+          }
           <a class="button" href="#projects">Projects</a>
-          <a class="button button--ghost" href="${profile.links.github}" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="button button--ghost" href="${profile.links.github}" target="_blank" rel="noreferrer">
+            <img src="./assets/icons/github.svg" alt="" aria-hidden="true" />
+            <span>GitHub</span>
+          </a>
         </div>
       </div>
     </div>
@@ -177,8 +186,8 @@ export function renderEducation(items) {
       <div class="accordion">
         ${items
           .map(
-            (item, index) => `
-              <details class="accordion-item" ${index === 0 ? "open" : ""}>
+            (item) => `
+              <details class="accordion-item">
                 <summary>
                   <span>
                     <strong>${escapeHtml(item.school)}</strong>
@@ -245,25 +254,52 @@ export function renderCredentials(credentials) {
 }
 
 export function renderContact(profile) {
+  const contactLinks = [
+    {
+      label: "GitHub",
+      href: profile.links.github,
+      icon: "./assets/icons/github.svg"
+    },
+    {
+      label: "LinkedIn",
+      href: profile.links.linkedin,
+      icon: "./assets/icons/linkedin.svg"
+    },
+    {
+      label: "Instagram",
+      href: profile.links.instagram,
+      icon: "./assets/icons/instagram.svg"
+    },
+    {
+      label: "Resume",
+      href: profile.links.resume,
+      icon: "./assets/icons/resume.svg"
+    }
+  ].filter((item) => item.href);
+
   document.querySelector("#contact").innerHTML = `
     <div class="section__inner">
       <div class="section__header section__header--center">
         <p class="eyebrow">Contact</p>
         <h2>Contact Me</h2>
       </div>
-      <div class="contact-grid">
-        <a class="card contact-card" href="${profile.links.email}">
-          <span>Email</span>
+      <div class="contact-simple">
+        <a class="contact-email" href="${profile.links.email}">
+          <img src="./assets/icons/email.svg" alt="" aria-hidden="true" />
           <strong>${escapeHtml(profile.contact.email)}</strong>
         </a>
-        <a class="card contact-card" href="${profile.links.github}" target="_blank" rel="noreferrer">
-          <span>GitHub</span>
-          <strong>${escapeHtml(profile.links.github.replace("https://", ""))}</strong>
-        </a>
-        <a class="card contact-card" href="${profile.links.resume}" target="_blank" rel="noreferrer">
-          <span>Resume</span>
-          <strong>PDF 보기</strong>
-        </a>
+        <div class="contact-links">
+          ${contactLinks
+            .map(
+              (item) => `
+                <a class="contact-link" href="${escapeHtml(item.href)}" target="_blank" rel="noreferrer">
+                  <img src="${escapeHtml(item.icon)}" alt="" aria-hidden="true" />
+                  <span>${escapeHtml(item.label)}</span>
+                </a>
+              `
+            )
+            .join("")}
+        </div>
       </div>
     </div>
   `;
